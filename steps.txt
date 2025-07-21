@@ -15,6 +15,7 @@ npm uninstall packageName -> used to delete packages from our dependencies(packa
 
 Express JS -> Manages everything from receiving the request and giving the response
            -> It is a framework
+           -> npm i express
 
 nodemon -> Use for redirect the changes to the website without starting the server again and again 
         -> npm i nodemon -g

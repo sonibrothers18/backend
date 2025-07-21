@@ -63,15 +63,66 @@ const app = express()
 //todo When we send our data from browser to server then our plain text data is converted into unreadable format. Now, to store this data in server these 2 lines of code is used to convert unreadable formated data into readable format.
 //todo Always code this at top
 //! Also called Parsers
+// app.use(express.json());
+// app.use(express.urlencoded({extended: true}));
+
+// app.get("/", function(req, res){
+//   res.send("Hello World")
+// })
+
+// app.get('/profile', (req, res) => {
+//   res.send('Welcome to profile')
+// })
+
+// app.listen(3000)
+//! =============================================================================================
+
+//! EJS -> Similar like HTML but with extra features
+//!     -> create views folder
+// app.use(express.json());
+// app.use(express.urlencoded({extended: true}));
+
+// //todo setting ejs
+// app.set("view engine", "ejs");
+
+// app.get("/", function(req, res){
+//   //! Use res.render instead of res.send
+//   res.render("index")
+// })
+
+// app.listen(3000)
+//! =============================================================================================
+
+//! Setting up public static files
+// app.use(express.json());
+// app.use(express.urlencoded({extended: true}));
+
+// //todo use for setting path
+// const path = require('path');
+// app.use(express.static(path.join(__dirname, 'public')));
+
+// app.set("view engine", "ejs");
+
+// app.get("/", function(req, res){
+//   res.render("index")
+// })
+
+// app.listen(3000)
+//! =============================================================================================
+
+//! Dynamic Routing
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+app.set("view engine", "ejs");
 
-app.get("/", function(req, res){
-  res.send("Hello World")
+app.get("/profile/:username", function(req, res){
+  res.send(`Welcome, ${req.params.username}`);
 })
 
-app.get('/profile', (req, res) => {
-  res.send('Welcome to profile')
+app.get("/profile/:username/:age", function(req, res){
+  res.send(`Welcome, ${req.params.username} of age ${req.params.age}`);
 })
 
 app.listen(3000)
