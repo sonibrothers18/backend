@@ -1,0 +1,24 @@
+Node JS -> Used to create server and for running our code on browser.
+        -> It adds an extra layer on browser which is used to convert JS code to C as browser understand C language only.
+        -> It creates a run time environment
+
+npm init -> To create package.json(contains all the information about our project)
+
+node script.js(file name) -> To run node code
+
+node js core mein jo installed aata hai wo kehlaata hain module
+npm se download krte hai wo hota hai package
+
+npm i packageName -> used to install packages from npm website
+npm i packageName@version -> used to install specific version of package
+npm uninstall packageName -> used to delete packages from our dependencies(package.json)
+
+Express JS -> Manages everything from receiving the request and giving the response
+           -> It is a framework
+
+nodemon -> Use for redirect the changes to the website without starting the server again and again 
+        -> npm i nodemon -g
+        -> nodemon 02_script.js
+
+EJS -> npm i ejs
+    -> Similar like HTML but with extra features 
