@@ -3,6 +3,7 @@ Node JS -> Used to create server and for running our code on browser.
         -> It creates a run time environment
 
 npm init -> To create package.json(contains all the information about our project)
+         -> npm init -y
 
 node script.js(file name) -> To run node code
 
